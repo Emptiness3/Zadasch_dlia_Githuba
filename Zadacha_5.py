@@ -2,19 +2,19 @@ def Zadacha_5():
 # Biblio
 	import math;
 
-# Description / Interface
+# Description
 	print("Введите радиус круга: ");
 
 # Input
 	radius = int(input());
-	s = 0; # Площадь круга
-	l = 0; # Длина окружности
+	ploshad = 0; 
+	dlina = 0;
 
 # Base
-	l = math.pi * 2 * radius;
-	s = math.pi * radius ** 2;
-	print("Длина окружности: " + str(l));
-	print("Площадь круга: " + str(s));
+	dlina = math.pi * 2 * radius;
+	ploshad = math.pi * radius ** 2;
+	print("Длина круга: " + str(dlina));
+	print("Площадь круга: " + str(ploshad));
 	
 	import Startovoia;
 	Startovoia.Start();

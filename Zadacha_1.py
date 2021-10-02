@@ -1,15 +1,15 @@
 def Zadacha_1():
 # Description
-	print("Введите ваше число: ");
+	print("Введите число: ");
 
 # Input
-	chislo = int(input());
+	number = int(input());
 
 # Base
-	if (chislo % 2 != 0):
-		print("Ваше число нечетное");
+	if (number % 2 != 0):
+		print("Число нечетное");
 	else:
-		print("Ваше число четное");
+		print("Число четное");
 
 	import Startovoia;
 	Startovoia.Start();

@@ -1,19 +1,20 @@
 def Zadacha_2():
 # Description
-	print("Введите ваши числа: ");
+	print("Введите числа: ");
 
 # Input
-	chislo_1 = int(input());
-	chislo_2 = int(input());
+	number_1 = int(input());
+	number_2 = int(input());
 	result = "";
 
 # Base
-	if (chislo_1 > chislo_2) & (chislo_1 % chislo_2 == 0):
-		result = str(chislo_1) + " кратно " + str(chislo_2);
+	if (number_1 > number_2) & (number_1 % number_2 == 0):
+		result = str(number_1) + " кратно " + str(number_2);
 		print(result);
-	elif (chislo_2 > chislo_1) & (chislo_2 % chislo_1 == 0):
-		result = str(chislo_2) + " кратно " + str(chislo_1);
+	elif (number_2 > number_1) & (number_2 % number_1 == 0):
+		result = str(number_2) + " кратно " + str(number_1);
 		print(result);
+	else: print("Числа не кратны")
 		
 	import Startovoia;
 	Startovoia.Start();
