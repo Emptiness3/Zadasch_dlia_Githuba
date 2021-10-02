@@ -4,7 +4,6 @@ def Zadacha_1():
 
 # Input
 	chislo = int(input());
-	result = "";
 
 # Base
 	if (chislo % 2 != 0):
