@@ -7,9 +7,9 @@ def Zadacha_1():
 
 # Base
 	if (number % 2 != 0):
-		print("Число нечетное");
+		print("Нечётное");
 	else:
-		print("Число четное");
+		print("Чётное");
 
 	import Startovoia;
 	Startovoia.Start();
