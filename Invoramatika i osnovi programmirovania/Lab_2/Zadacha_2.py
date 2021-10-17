@@ -1,4 +1,6 @@
 def Zadacha_2():
+	# Description
+	print("Введите число изи диапазона [1, 1000]: ");
 	# Input
 	chislo = int(input());
 	prom_chislo = 0;

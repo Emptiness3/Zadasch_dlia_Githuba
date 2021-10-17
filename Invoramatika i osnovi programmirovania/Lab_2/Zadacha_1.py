@@ -1,9 +1,11 @@
 def Zadacha_1():
+	# Description
+	print("Введите два целых числа из диапозона [-100, 100]: ");
 	# Input
 	chislo_1 = int(input());
 	chislo_2 = int(input());
-	min_chislo = 0; # Можно и без этого
-	max_chislo = 0; # Можно и без этого
+	min_chislo = 0;
+	max_chislo = 0;
 
 	# Base
 	min_chislo = min(chislo_1, chislo_2);
