@@ -1,11 +1,14 @@
 def Zadacha_5():
+	# Description
+	print("Введите целое число из диапазона [1, 9]: ");
 	# Input
-	chislo = int(input());
+	number = int(input());
 
 	# Base
-	if (1 <= chislo <= 9):
-		for i in range(1, chislo + 1):
-			print(str(chislo) * chislo);
-
+	print("____________");
+	if (1 <= number <= 9):
+		for i in range(1, number + 1):
+			print(str(number) * number);
+	print("____________");
 	import Startovoia;
 	Startovoia.Start();

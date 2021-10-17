@@ -1,26 +1,22 @@
 def Zadacha_3():
+	# Description
+	print("Введите целое число из диапазона [1, 1000]: ");
 	# Input
-	chislo = int(input());
-	prom_chislo = 0;
+	number = int(input());
+	chislo_delitelei = 0;
 
 	# Base
-	if (1 <= chislo <= 1000):
-		for i in range(1, chislo):
-			if (chislo % i == 0):
-				prom_chislo += i;
-	else: print("Число вышло за диапазон! Введите число в диапазоне [1, 1000]");
+	if (1 <= number <= 1000):
+		for i in range(1, number):
+			if (number % i == 0):
+				chislo_delitelei += i;
+	else: print("Число не входит в диапазон [1, 1000], повторите запрос");
 
-	if (prom_chislo == chislo):
-		print(str(chislo) + " - " + "Это число совершенное");
-	elif (prom_chislo != 0): 
-		print("Число" + " " + str(chislo) + " " + "не совершенное");
+	if (chislo_delitelei == number):
+		print(str(number) + " - " + "Это число совершенное");
+	elif (chislo_delitelei != 0): 
+		print("Число" + " " + str(number) + " " + "не является совершенным");
 
-	# Help
-		"""
-		Совершенных чисел не так много. 
-		В диапазоне от 1 до 1000 их всего 3.
-		Это 6, 28, 496
-		"""
 
 	import Startovoia;
 	Startovoia.Start();
