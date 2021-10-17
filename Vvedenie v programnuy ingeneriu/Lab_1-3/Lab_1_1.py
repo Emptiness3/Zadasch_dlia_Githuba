@@ -1,5 +1,5 @@
 def Lab_1_1():
-  Isx_Str = 'xxxabcdxxx'
+  Isx_Str = 'xxpuxxasdxxx'
   New_Str = ''
   print(Isx_Str)
   for i in Isx_Str:
