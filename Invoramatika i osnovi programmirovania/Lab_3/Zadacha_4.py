@@ -23,6 +23,6 @@ def Zadacha_4():
         print('Линия содержит больше согласных')
     else:
         print('Количество гласных и согласных равно')
-
-	import Dop;
-	Dop.vixod();
+    
+    import Dop;
+    Dop.vixod();

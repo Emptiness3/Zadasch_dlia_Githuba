@@ -7,5 +7,5 @@ def Zadacha_3():
         print((height-r-1)*' ' + (i*2+1)*'X')
         i += 1
     
-	import Dop;
-	Dop.vixod();
+    import Dop;
+    Dop.vixod();

@@ -8,5 +8,5 @@ def Zadacha_2():
             print("%4d" % (index1 * index2), end='')
         print()
     
-	import Dop;
-	Dop.vixod();
+    import Dop;
+    Dop.vixod();

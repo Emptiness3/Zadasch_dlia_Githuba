@@ -21,6 +21,6 @@ def Zadacha_1():
 		print("Текст являеттся палиндромом")
 	else:
 		print("Текст не является палиндромом")
-    
+
 	import Dop;
 	Dop.vixod();

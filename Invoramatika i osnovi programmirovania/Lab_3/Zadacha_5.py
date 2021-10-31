@@ -17,6 +17,6 @@ def Zadacha_5():
         print('{0} рубля'.format(rub))
     else:
         print('{0} рублей'.format(rub))
-
-	import Dop;
-	Dop.vixod();
+    
+    import Dop;
+    Dop.vixod();
