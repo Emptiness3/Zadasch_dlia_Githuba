@@ -5,7 +5,7 @@ import Zadacha_2;
 import Zadacha_3;
 import Zadacha_4;
 import Zadacha_5;
-
+import Dop;
 def Start():
 	Text.Opisanie();
 

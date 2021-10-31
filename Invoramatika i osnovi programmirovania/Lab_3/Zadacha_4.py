@@ -1,27 +1,28 @@
 def Zadacha_4():
     # Input
-    lin = str(input('Введите предложение:\n'))
+    linia = str(input('Введите предложение:\n'))
 
     # Base
     soglasnie = ['б', 'в', 'г', 'д', 'ж',
                  'з', 'й', 'к', 'л', 'м',
                  'н', 'п', 'р', 'с', 'т',
-                 'ф', 'х', 'ц', 'ч' ,'ш', 'щ']
+                 'ф', 'х', 'ц', 'ч' ,'ш', 
+                 'щ', ]
     glasnie =  ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
     countGlas = 0
     countSogl = 0
-    lin = lin.lower()
-    for smb in lin:
+    linia = linia.lower()
+    for smb in linia:
         if smb in soglasnie:
             countSogl += 1
         if smb in glasnie:
             countGlas +=1
     if countGlas > countSogl:
-        print('Строка гласная')
+        print('Линия содержит больше гласных')
     elif countGlas < countSogl:
-        print('Строка согласная')
+        print('Линия содержит больше согласных')
     else:
-        print('Гласных и согласных букв одинаковое кол–во')
+        print('Количество гласных и согласных равно')
 
-    import Startovoia;
-    Startovoia.Start();
+	import Dop;
+	Dop.vixod();

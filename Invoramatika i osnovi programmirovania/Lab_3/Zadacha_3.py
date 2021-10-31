@@ -6,6 +6,6 @@ def Zadacha_3():
     for r in range(height):
         print((height-r-1)*' ' + (i*2+1)*'X')
         i += 1
-
-    import Startovoia;
-    Startovoia.Start();
+    
+	import Dop;
+	Dop.vixod();

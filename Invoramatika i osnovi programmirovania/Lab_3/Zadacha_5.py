@@ -18,5 +18,5 @@ def Zadacha_5():
     else:
         print('{0} рублей'.format(rub))
 
-    import Startovoia;
-    Startovoia.Start();
+	import Dop;
+	Dop.vixod();
