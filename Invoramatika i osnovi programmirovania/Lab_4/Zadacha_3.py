@@ -1,11 +1,14 @@
 def Zadacha_3():
-    # Input
-    height = int(input('Введите высоту пирамиды: '))
-    # Base
-    i = 0
-    for r in range(height):
-        print((height-r-1)*' ' + (i*2+1)*'X')
-        i += 1
-    
-    import Dop;
-    Dop.vixod();
+    for i in range(1,3000):  
+        ct = 0
+        n = 343**5+7**3-1-i
+        while n>0:
+            if n%7 == 6:
+                ct+=1
+            n = n//7
+        if ct == 12:
+            print(i)
+            break
+
+    import Dop
+    Dop.vixod()
