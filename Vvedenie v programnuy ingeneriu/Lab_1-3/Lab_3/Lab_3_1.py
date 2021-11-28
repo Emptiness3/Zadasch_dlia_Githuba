@@ -16,5 +16,3 @@ for i in range(len(Tanks)):
     break
 print("Максимальный запрос прочности из танков равен: ") 
 print(max_hp)
-
-
