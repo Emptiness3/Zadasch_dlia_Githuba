@@ -14,13 +14,13 @@ def Zadacha_1():
 	line = ''.join(otvet)
 	line = line.lower()	
 	elline = line[::-1]
-	print(elline);
-	print(line);
+	print(elline)
+	print(line)
 
 	if line == elline:
 		print("Текст являеттся палиндромом")
 	else:
 		print("Текст не является палиндромом")
 
-	import Dop;
-	Dop.vixod();
+	import Dop
+	Dop.vixod()
