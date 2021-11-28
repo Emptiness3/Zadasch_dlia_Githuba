@@ -35,6 +35,7 @@ class Students:
 		if ((St_rosti - 5 < Rost_v < St_rosti + 5) and (Vivod >= 0.4)):
 			person = (St_idy, St_imena, rost)
 			print(person)
+			print(Vivod)
 
 Misha   = Students(0, "Misha", 178)
 Natasha = Students(1, "Natasha", 160)
