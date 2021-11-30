@@ -10,4 +10,7 @@ question = ""
 while question != "хватит": 
     print(prompt, end = ' ')
     answer = brain.think(input())
-    print(answer)
+    if brain.think(input()) == 'хватит':
+        exit()
+    else:
+        print(answer)

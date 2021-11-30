@@ -1,97 +1,101 @@
-### LAB NUMBER 7 ###
-# Import
-from itertools import product
-from pprint import pprint
+Name_HE    = input("Введите имя: ");
+SecName_HE = input("Введите фамилию: ");
+Street_HE  = input("Введите название улицы: ");
+House_HE   = int(input("Введите номер дома: "));
+Floor_HE   = int(input("Введите номер квартиры: "));
+print();
 
 
-class Person:
+class Students:
 
 
-	def __init__(self, name, age, adress):
-		self.name = name
-		self.age = age
-		self.adress = adress
-		self.key = (name, adress)
+	def __init__(self, idn, name, secName, street, house, floor):
+
+		self.idn = idn;
+		St_idn = self.idn;
+
+		self.name = name;
+		St_name = self.name;
+
+		self.secName = secName;
+		St_secName = self.secName;
+
+		self.street = street;
+		St_street = self.street;
+
+		self.house = house;
+		St_house = self.house;
+
+		self.floor = floor;
+		St_floor = self.floor;
+
+### Algoritm Compare
+		count = 0;
+
+		len_0 = len(Name_HE);
+		len_1 = len(name);
+		len_2 = len(SecName_HE);
+		len_3 = len(secName);
+		len_4 = len(Street_HE);
+		len_5 = len(street);
+
+		len_sum = len_1 + len_3 + len_5;
+
+		max_len = 0;
+
+		elem_0 = str(Name_HE);
+		elem_1 = St_name;
+		elem_2 = SecName_HE;
+		elem_3 = secName;
+		elem_4 = Street_HE;
+		elem_5 = St_street;
+
+		Compare_return = 0;
+
+		max_len = max(len_0, len_1, len_2, len_3, len_4, len_5);
+	
+		#print('Max: ' + str(max_len));
+
+		for i in range(max_len):
+			try:
+				if elem_0[i] == elem_1[i]:
+					count += 1;
+			except:
+				pass;
+		print("Wawe 1: " + " Счётчик for_1: " + str(i) + "; Максимум длины: " + str(max_len) + "; Счётчик совпалдений: " + str(count)); # Debug
+
+		for i2 in range(max_len):
+			try:
+				if elem_2[i2] == elem_3[i2]:
+					count += 1;
+			except:
+				pass;
+		print("Wawe 2: " + " Счётчик for_2: " + str(i2) + "; Максимум длины: " + str(max_len) + "; Счётчик совпалдений: " + str(count)); # Debug
+
+		for i3 in range(max_len):
+			try:
+				if elem_4[i3] == elem_5[i3]:
+					count += 1;
+			except:
+				pass;
+		print("Wawe 3: " + " Счётчик for_3: " + str(i3) + "; Максимум длины: " + str(max_len) + "; Счётчик совпалдений: " + str(count)); # Debug
+
+				#print(count)
+		#print(max_len)
+		Compare_return = count / len_sum;
+		print('Compare_return: ' + str(Compare_return) + '\n'); # Debug
 
 
-	def __repr__(self):
-		return "Person('%s', '%s', '%s')"
+		if (Compare_return >= 0.3) and (St_house - 5 <= House_HE <= St_house + 5) or 	   (Compare_return >= 0.3) and (St_floor - 5 <= Floor_HE <= St_floor + 5):
+			person = (St_idn, St_name, St_secName, St_street, St_house, St_floor);
+			print(person);
 
+###               ID --- Name --- SecName --- Street - House - Floor
+Misha   = Students(0, "Misha", "Kuzmin", "Krupskoi", 69, 45)
+Natasha = Students(1, "Natasha", "Mishina", "Habarovckaia", 56, 110)
+Natasha = Students(2, "Natasha", "Pushkina", "Mira", 48, 52)
+Vasilii = Students(3, "Vasilii", "Smrinov", "Maia", 23, 33)
+Vasilii = Students(4, "Vasilii", "Krilov", "Kirova", 43, 21)
+Valeria = Students(5, "Valeria", "Pavlova", "Odoevskogo", 44, 55)
+Valeria = Students(6, "Valeria", "Kruskova", "Dokuchaeva", 55, 43)
 
-	def fuzzy_compare(query):
-		q = set(query.split())
-		score = 0
-		for m, a in zip([ADDRES_WORDS, ], [by_adress, by_name, by_age]):
-			if m & q:
-				score += f(q)
-			return score > 0.49
-
-
-	for query, person in product(quaries, people.values()):
-		if person == query:
-			pprint((query, person))
-
-
-	def __eq__(self, obj):	
-		if type(obj) == Person:
-			return
-		elif type(obj) == str:
-			return fuzzy_compare(obj)
-		else:
-			return
-
-	def by_adress(Q):
-		Q = Q - ADRESS_WORDS
-		W = set(self.adress.split())
-		rez = []
-		for a, b in product(Q, W):
-			rez += [(compare(a, b), a, b)]
-		return max(rez)[0]
-
-	# Age
-	def by_age(Q):
-		q_age = max([int_val(q) for q in Q])
-		if 'elder' in Q:
-			return q_age < self.age
-		return q_age + 5 >= self.age >= q_age - 5
-
-
-	lena = Person("Lena", 19, "Pushkina")
-	oleg = Person("Oleg", 34, "Lenskogo")
-	olga = Person("Olga", 28, "Onegina")
-	natasha = Person("Natasha", 17, "Rostova")
-		
-	queries = [
-		'name Olga',
-		'age 30',
-		'elder 20',
-		'younger 20',
-		'live on st.Pushkina',
-		'house 10',
-		'second name Rostova',
-		'name Natasha',
-	]
-	people = {
-		lena.key : lena,
-		oleg.key : oleg,
-		olga.key : olga,
-		natasha.key : natasha,
-	}
-
-	ADRESS_WORDS = {'house', 'street', 'live'}
-
-
-# Test
-if __name__ == '__main__':
-	for a, b in [
-			('algoritm', 'algoritmi'),
-			('stol', 'stolik'),
-			('stol', 'styl'),
-			]:
-			print(a, b, compare(a, b))
-	print([int_val(s) for s in ['c', '1']])
-
-
-#for query, person in product(quaries, people.values()):
-#	if person == query:
-#		pprint((query, person))

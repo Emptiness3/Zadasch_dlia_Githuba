@@ -14,8 +14,9 @@ class Student():
 
     ###Student
     def get_full_name(self):
-        name = f"Студент {self.Course} курса - {self.Surname} {self.Name} {self.Patronymic} {self.Years} г.р."
-        return name.title()
+        Description = f"Студент {self.Course} курса - {self.Surname} {self.Name} {self.Patronymic} {self.Years} г.р."
+        return Description.title()
+
 
 ###                   Name --- Surname --- Patronymic - Course - Year of birth
 Student_1 = Student('Михаил', 'Кузьмин', 'Константинович', '1', '2000')
