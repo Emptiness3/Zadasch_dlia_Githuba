@@ -5,7 +5,7 @@ from itertools import product
 from pprint import pprint
 NOT_FOUND = '$'
 MIN_WORD_SIMILARITY = 0
-MIN_QUESTION_SIMILARITY = 0.5
+MIN_QUESTION_SIMILARITY = 0.2
  
 class Brain():
     memory = dict()
@@ -42,14 +42,5 @@ class Brain():
             except (AssertionError, ZeroDivisionError):
                 answer = self.answers[randint(0, len(self.answers)-1)]
                 self.memory.update({words:answer})
-                return "Мой ответ - %s!" % answer
-        
-if __name__ == '__main__':
-    brain = Brain()
-    print(brain.think('Какой-то вопрос?'))  
-    print(brain.think('Какой-то вопрос?'))  
-    print(brain.think('Какой то вопросик?'))
-    print(brain.think('Какой то вопросчек?'))
-    print(brain.think('Какой то вопросчечечек?'))
-    print(brain.think('Сегодня будет дождь?'))
-    print(brain.think('Завтра будет дождь?'))
+                if question == "Прекрати": exit()
+                return "My answer is - %s!" % answer

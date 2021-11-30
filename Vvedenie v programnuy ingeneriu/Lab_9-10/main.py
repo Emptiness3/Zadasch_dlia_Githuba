@@ -1,16 +1,10 @@
-'___________________'
-'Гадалка'
-'___________________'
 from brain import Brain
  
 brain = Brain()
-prompt = "Что Вас интересует?"
+prompt = "Я отвечу на любой вопрос да или нет, каков он будет?"
  
-question = ""
-while question != "хватит": 
+question = " "
+while question != "Прекрати": 
     print(prompt, end = ' ')
     answer = brain.think(input())
-    if brain.think(input()) == 'хватит':
-        exit()
-    else:
-        print(answer)
+    print(answer)
