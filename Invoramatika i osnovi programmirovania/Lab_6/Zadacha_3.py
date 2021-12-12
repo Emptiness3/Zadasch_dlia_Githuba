@@ -1,9 +1,4 @@
 def Zadacha_3():
-    def print_digit(dig):
-        for line in dig:
-            print(line)
-
-
     digits = {
         0: ('XXX', 'X X', 'X X', 'X X', 'XXX'),
         1: ('  X', ' XX', '  X', '  X', '  X'),
@@ -16,11 +11,19 @@ def Zadacha_3():
         8: ('XXX', 'X X', 'XXX', 'X X', 'XXX'),
         9: ('XXX', 'X X', 'XXX', '  X', 'XXX'),
     }
+    def vivod_nomer(nomer):
+        for i in range(len(digits[0])):
+            for obj in nomer:
+                print(digits[int(obj)][i].ljust(6, ' '), end='')
+            print()
 
-    for i in range(len(digits)):
-        dig = digits[i]  # найдём образ цифры
-        print_digit(dig)  # распечатаем образ цифры
-        print()
+
+    def vvod_nomer():
+        nomer = input('Введите номер: ')
+        vivod_nomer(nomer)
+
+
+    vvod_nomer()
 
     import Dop
     Dop.vixod()
